@@ -447,10 +447,16 @@ footer {
 .map-responsive {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%;
+    padding-bottom: 33.25%;
     /* 16:9 */
     height: 0;
     overflow: hidden;
+}
+
+@media (max-width: 992px) {
+    .map-responsive {
+        padding-bottom: 80.25%;
+    }
 }
 
 .mozilla-headline-fonte {
