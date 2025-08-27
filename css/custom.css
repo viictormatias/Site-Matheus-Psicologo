@@ -1,0 +1,34 @@
+.bg-light {
+    background-color: #efdfcb !important;
+}
+
+.navbar-letters-color {
+    color: #222122;
+}
+
+.navbar {
+    box-shadow: 0px 4px 11px -9px;
+    z-index: 1;
+}
+
+h1,
+h2,
+h3,
+p {
+    color: #222122;
+}
+
+a {
+    color: #222122;
+    text-decoration: none;
+}
+
+.footbar-letters-color {
+    color: #222122;
+}
+
+
+/* marrom escuro #222122
+    background-color: #debe97;
+    bg-light (navabr): #efdfcb;
+  */

@@ -2,6 +2,10 @@
     color: blue;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 .banner {
     height: 600px;
 }
@@ -10,8 +14,11 @@
     height: 600px;
 }
 
-p {
-    font: 1.1em sans-serif;
+.nata-sans-font {
+    font-family: "Nata Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
 }
 
 .a {
@@ -43,7 +50,7 @@ figcaption {
 
 #services {
     background-color: #f8f9fa;
-    padding: 40px 0;
+
 }
 
 #about {
@@ -72,23 +79,16 @@ figcaption {
     height: 100%;
 }
 
+
+
 .secao-background {
-    /* 1. Defina a imagem de fundo */
-    background-image: url(/images/wpp-cropped.png);
-    /* Substitua pela URL da sua imagem */
 
-    /* 2. Centralize a imagem */
+    background-image: url(/images/mulher-jovem-usando-tecnologia-domestica.jpg);
     background-position: center center;
-
-    /* 3. Faça a imagem cobrir toda a área da div */
     background-size: cover;
-
-    /* 4. Evite que a imagem se repita */
     background-repeat: no-repeat;
-
-    /* 5. Defina uma altura mínima para a seção ser visível */
-    min-height: 500px;
-    /* Ajuste esta altura conforme necessário */
+    background-attachment: fixed;
+    min-height: 80vh;
 
     /* Opcional: Adicione um overlay escuro para o texto ficar mais legível */
     position: relative;
@@ -197,7 +197,6 @@ figcaption {
     background-position: center center;
     width: 950px;
     padding: 50px;
-    margin: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -205,10 +204,35 @@ figcaption {
     border-radius: 30px;
 }
 
+@media (max-width: 992px) {
+    .background-container {
+        padding: 0px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+
+
+
 .wrapper {
-    width: 760px;
+    width: 755px;
     margin: 10px;
     padding: 40px 20px;
+}
+
+/* Responsivo para tablets */
+@media (max-width: 992px) {
+    .wrapper {
+        width: 100%;
+    }
+}
+
+/* Responsivo para celulares */
+@media (max-width: 576px) {
+    .wrapper {
+        width: 100%;
+    }
 }
 
 .wrapper .search {
@@ -304,9 +328,15 @@ figcaption {
     color: #1E88E5;
 }
 
-/* ...existing code... */
+html {
+    scroll-behavior: smooth;
+}
+
+
 html,
 body {
+    margin: 0;
+    padding: 0;
     height: 100%;
 }
 
@@ -314,6 +344,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: 'Nata Sans', sans-serif;
+    background-color: white;
 }
 
 footer {
@@ -328,15 +360,123 @@ footer {
         url('/images/forest.jpg') no-repeat bottom center;
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 100%;
-    /* ajuste conforme necessário */
     width: 100%;
+}
+
+#logowhats {
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    z-index: 99;
+}
+
+#depoiments {
+
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+}
+
+
+#welcome-image {
+    width: 100%;
+    height: 100vh;
+    background-image: url('/images/nova-versao.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Tablet e celular */
+@media (max-width: 992px) {
+    #welcome-image {
+        background-image: url('/images/nova-vertical-mobile.png');
+        height: 70vh;
+    }
+}
+
+.container-full {
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 
 
-/* #0c180e verde escuro
-    #18140c marrom escuro
-    #0c1018 azul escuro
-    #180c16 roxo escuro
+/* marrom escuro #222122
+    background-color: #debe97;
+    bg-light (navabr): #efdfcb;
   */
+
+
+/*  Seção de dados de autoridade   */
+
+
+.fonte-autoridades {
+    font-family: "Mozilla Headline", sans-serif;
+}
+
+.config-autoridades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+    padding: 50px;
+}
+
+#dados-autoridades {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+    min-height: 60vh;
+}
+
+@media (max-width: 992px) {
+    #dados-autoridades {
+        min-height: 130%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.map-responsive {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.mozilla-headline-fonte {
+    font-family: "Mozilla Headline", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(15px);
+    transition: all 2s;
+    transform: translateX(-100%);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transition: all 2s;
+    transform: translateX(0);
+}
+
+#dados-autoridades p {
+    text-align: center;
+    min-height: 100px;
+}
