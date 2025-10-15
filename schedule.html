@@ -97,11 +97,12 @@
                 msg.style.color = "gray";
 
                 try {
-                    const res = await fetch("https://script.google.com/macros/s/AKfycbx7yQgaVUhDteS12Kc_DPUURIhBUvVCDQPFfp0qMW--6R5VPfqu9WDiJCYl3fkK76CV/exec", {
+                    const res = await fetch("/api/enviarAgendamento", {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify(dados)
+                        body: JSON.stringify(dados),
                     });
+
 
                     const data = await res.json();
 
@@ -121,7 +122,6 @@
                 }
             });
         </script>
-
 
 
     </section>
