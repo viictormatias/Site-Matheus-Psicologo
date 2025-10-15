@@ -27,6 +27,10 @@ a {
     color: #222122;
 }
 
+.elfsight-app-5c332210-1d3b-4bbe-a12e-3b587e7ba2cc>a {
+    display: none !important;
+    visibility: hidden !important;
+}
 
 /* marrom escuro #222122
     background-color: #debe97;

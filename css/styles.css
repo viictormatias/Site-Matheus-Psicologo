@@ -496,12 +496,12 @@ footer {
 
 .tm-container {
     background-color: white;
-    max-width: 1400px;
+    max-width: 100%;
 }
 
 .tm-section-1 {
     height: 750px;
-    background-image: url(/images/business-page/medium-shot-colleagues-learning.jpg);
+    background-image: url(/images/business-page/imagem-1.webp);
     background-size: cover;
     -webkit-clip-path: polygon(0px 0px, 100% 0px, 100% 84%, 0px 100%);
     clip-path: polygon(0px 0px, 100% 0px, 100% 84%, 0px 100%);
@@ -512,7 +512,7 @@ footer {
 
 .tm-section-3 {
     height: 790px;
-    background-image: url(/images/business-page/business_photo-compressed.jpg.jpg);
+    background-image: url(/images/business-page/imagem-2.webp);
     background-size: cover;
     -webkit-clip-path: polygon(0px 0px, 100% 14%, 100% 86%, 0px 100%);
     clip-path: polygon(0px 0px, 100% 14%, 100% 86%, 0px 100%);
@@ -522,11 +522,15 @@ footer {
 }
 
 .tm-color-primary {
-    color: #cc0064;
+    color: #44676d;
 }
 
 .tm-color-secondary {
-    color: #0095bf;
+    color: #526d44;
+}
+
+.tm-color-tertiary {
+    color: #6d4a44;
 }
 
 .tm-bg-circle-white {
@@ -646,9 +650,7 @@ ul.dashed>li:before {
         padding: 50px;
     }
 
-    img {
-        max-width: 100%;
-    }
+
 
     .tm-section-1,
     .tm-section-3 {
@@ -671,4 +673,25 @@ ul.dashed>li:before {
     .tm-circle-img-container {
         margin-bottom: 30px;
     }
+}
+
+.eapps-widget-toolbar {
+    display: none !important;
+    pointer-events: none !important;
+}
+
+/* * Seletor de Atributo: Procura por QUALQUER tag <a>
+ * cujo atributo 'href' contenha a string 'elfsight.com/google-reviews-widget'.
+ * Isso é altamente específico e ignora IDs ou classes mutáveis.
+ */
+a[href*="elfsight.com/google-reviews-widget"] {
+    display: none !important;
+    visibility: hidden !important;
+    /* Adiciona outra camada de ocultação */
+    pointer-events: none !important;
+    /* Garante que não é clicável */
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    /* Remove qualquer vestígio visual */
 }
