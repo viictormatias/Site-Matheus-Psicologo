@@ -100,8 +100,12 @@
                     const res = await fetch("/api/enviarAgendamento", {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify(dados),
+                        body: JSON.stringify(dados)
                     });
+
+                    const resposta = await res.json();
+                    msg.textContent = resposta.mensagem || "Enviado com sucesso!";
+
 
 
                     const data = await res.json();

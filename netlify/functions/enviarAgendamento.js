@@ -30,15 +30,20 @@ export async function handler(event, context) {
             body: JSON.stringify(dados),
         });
 
-        const data = await resposta.text();
+        let data;
+        try {
+            data = await resposta.json();
+        } catch {
+            data = await resposta.text(); // fallback caso venha HTML
+        }
+
 
         return {
             statusCode: 200,
-            headers: {
-                "Access-Control-Allow-Origin": "*",
-            },
-            body: data,
+            headers: { "Access-Control-Allow-Origin": "*" },
+            body: JSON.stringify(data),
         };
+
     } catch (err) {
         return {
             statusCode: 500,
